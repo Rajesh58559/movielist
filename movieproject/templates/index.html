@@ -1,0 +1,13 @@
+{% extends 'test.html' %}
+{% block body %}
+<br><br><br>
+<h3 style="color:white">Movie list</h3>
+{% for i in movie_list %}
+<div>
+
+<ul style="color:white; font-size:20px;">
+    <li><a href="{% url 'movielistapp:details' i.id %}" style="color:blaack">{{i.moviename}}({{i.year}})</a></li>
+</ul>
+</div>
+{% endfor %}
+{% endblock %}
